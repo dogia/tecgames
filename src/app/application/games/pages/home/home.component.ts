@@ -15,8 +15,8 @@ export class HomeComponent {
     public gamesService: GamesService
   ){
     gamesService.results.subscribe(
-      e => {
-        const {games, search} = e;
+      eventData => {
+        const {games, search} = eventData;
         this.games = games;
         this.search = search;
       }
