@@ -3,7 +3,7 @@
 <div class="wrapper row">
   <div class="col-md-4">
     <figure>
-      <img [src]="game?.thumb" alt="">
+      <img [src]="game?.thumb" alt="" class="w-100">
     </figure>
   </div>
   <div class="col-md-8">
@@ -47,6 +47,17 @@
   <div class="col-md-12">
     <hr>
     <h2>Deals</h2>
+
+    <div class="row">
+      <app-deal
+        class="col-sm-6 col-md-4 col-lg-3"
+        *ngFor="let deal of game?.dealers"
+        [retail]="deal.retailPrice"
+        [saving]="deal.savings"
+        [price]="deal.price"
+        [storeID]="deal.storeID"
+      ></app-deal>
+    </div>
 
     <div class="text-center">
       <a role="button" class="btn btn-primary" routerLink="/games/home">Back</a>

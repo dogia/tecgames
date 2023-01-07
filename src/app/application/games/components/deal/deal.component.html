@@ -1,0 +1,13 @@
+<article class="card h-100">
+  <div class="card-body text-center">
+      <h5 class="card-title">Store {{storeID}}</h5>
+      <del>{{retail | currency:'USD'}}</del><br/>
+      <i>{{price | currency:'USD'}}</i><br/>
+      <strong>{{saving/100 | percent:'1.2-2'}}</strong>
+  </div>
+  <div class="card-footer text-center">
+    <a class="btn btn-secondary text-white" role="button">
+      Buy
+    </a>
+  </div>
+</article>

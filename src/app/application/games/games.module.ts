@@ -13,6 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { GameComponent } from './components/game/game.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailComponent } from './pages/detail/detail.component';
+import { DealComponent } from './components/deal/deal.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { DetailComponent } from './pages/detail/detail.component';
     // Pages
     GamesComponent,
     HomeComponent,
-    DetailComponent
+    DetailComponent,
+    DealComponent
 
   ],
   imports: [
