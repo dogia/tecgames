@@ -3,6 +3,12 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@environments/*": ["src/environments/*"],
+      "@infrastructure/*": ["src/app/infrastructure/*"],
+      "@application/*": ["src/app/application/*"],
+      "@domain/*": ["src/app/domain/*"]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -19,6 +25,9 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "types": [
+      "@angular/localize"
+    ],
     "lib": [
       "ES2022",
       "dom"
