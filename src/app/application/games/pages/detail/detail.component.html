@@ -1,0 +1,57 @@
+<h3>{{game?.title?.external}} ({{gameID}})</h3>
+
+<div class="wrapper row">
+  <div class="col-md-4">
+    <figure>
+      <img [src]="game?.thumb" alt="">
+    </figure>
+  </div>
+  <div class="col-md-8">
+    <h2>About {{game?.title?.external}}</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Game ID:</strong>
+          </td>
+          <td>{{gameID}}</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Steam App ID:</strong>
+          </td>
+          <td>{{game?.steamAppID || 'N/A'}}</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Name:</strong>
+          </td>
+          <td>{{game?.title?.external}}</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Lowest Price</strong>
+          </td>
+          <td>{{game?.cheapest | currency:'USD'}}</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Price Date</strong>
+          </td>
+          <td>{{game?.cheapestDate | date:'longDate':undefined:'en-US'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-12">
+    <hr>
+    <h2>Deals</h2>
+
+    <div class="text-center">
+      <a role="button" class="btn btn-primary" routerLink="/games/home">Back</a>
+    </div>
+    <br>
+  </div>
+
+</div>

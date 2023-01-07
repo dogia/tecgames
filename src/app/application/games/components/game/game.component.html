@@ -1,0 +1,15 @@
+<article class="card h-100">
+  <figure>
+    <img [src]="thumb" [alt]="name" alt="" class="card-img-top">
+  </figure>
+  <div class="card-body text-center">
+    <a [routerLink]="['/games/detail/'+gameID]" [title]="name" class="link-unstyled">
+      <h5 class="card-title">{{name}}</h5>
+    </a>
+  </div>
+  <div class="card-footer text-center">
+    <a [routerLink]="['/games/detail/'+gameID]" class="btn btn-secondary text-white" [title]="name">
+      Ver detalles
+    </a>
+  </div>
+</article>

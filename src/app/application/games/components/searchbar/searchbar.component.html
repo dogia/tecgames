@@ -1,0 +1,25 @@
+<form class="d-none d-md-block" (submit)="false">
+  <div class="border">
+    <label for="search">
+      <fa-icon [icon]="faSearch" class="px-2 text-primary"></fa-icon>
+    </label>
+    <input
+      type="search"
+      name="searchbar-input"
+      id="search"
+      class="search"
+      placeholder="¿Qué estás buscando?"
+      />
+  </div>
+</form>
+
+<div
+  class="d-block d-md-none text-primary"
+  (touch)="openSearchModal()"
+  (click)="openSearchModal()">
+  <fa-icon
+    [icon]="faSearch"
+    class="px-2 text-primary"
+    role="button"
+    title="Search Tool"></fa-icon>
+</div>

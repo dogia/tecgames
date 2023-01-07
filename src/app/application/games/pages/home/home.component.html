@@ -1,0 +1,16 @@
+<h3>All Games</h3>
+
+<div class="wrapper row">
+  <app-game
+    class="col-sm-6 col-md-4 col-lg-3"
+    *ngFor="let game of games"
+    [thumb]="game.thumb"
+    [name]="game.title.external"
+    [gameID]="game.gameID"
+  ></app-game>
+
+  <p *ngIf="search == ''" class="text-center">Try searching something.</p>
+  <p
+    *ngIf="games.length == 0 && search != ''"
+    class="text-center">There aren't results.</p>
+</div>
